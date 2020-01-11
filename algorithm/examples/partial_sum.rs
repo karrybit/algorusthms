@@ -7,6 +7,6 @@ fn main() {
         "{:?} can make up {} is {}",
         &arr,
         k,
-        algorithm::dfs::partial_sum(&arr, k)
+        algorithm::dfs::is_partial_sum(&arr, k)
     );
 }
