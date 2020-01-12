@@ -22,3 +22,20 @@ pub fn range_scheduling(mut processes: Vec<(u32, u32)>) -> u32 {
     }
     count
 }
+
+pub fn best_cow_line(s: String) -> String {
+    let mut t = "".to_string();
+    let (mut front, mut back): (usize, usize) = (0, s.len() - 1);
+    while front <= back {
+        let l = s.chars().nth(front).unwrap();
+        let r = s.chars().nth(back).unwrap();
+        if l < r {
+            t.push(l);
+            front += 1;
+        } else {
+            t.push(r);
+            back -= 1;
+        }
+    }
+    t
+}

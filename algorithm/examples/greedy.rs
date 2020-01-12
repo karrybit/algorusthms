@@ -7,4 +7,6 @@ fn main() {
 
     let processes = vec![(1, 3), (2, 5), (4, 7), (6, 9), (8, 10)];
     println!("{}", algorithm::greedy::range_scheduling(processes.clone()));
+
+    println!("{}", algorithm::greedy::best_cow_line("ACDBCB".to_string()));
 }
