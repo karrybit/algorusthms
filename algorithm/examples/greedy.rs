@@ -9,4 +9,7 @@ fn main() {
     println!("{}", algorithm::greedy::range_scheduling(processes.clone()));
 
     println!("{}", algorithm::greedy::best_cow_line("ACDBCB".to_string()));
+
+    let points = vec![1, 7, 15, 20, 30, 50];
+    println!("{}", algorithm::greedy::sarumans_army(points, 10));
 }

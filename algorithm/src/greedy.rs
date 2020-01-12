@@ -39,3 +39,17 @@ pub fn best_cow_line(s: String) -> String {
     }
     t
 }
+
+pub fn sarumans_army(mut points: Vec<u32>, r: u32) -> u32 {
+    let mut count = 0;
+    let mut x = 0u32;
+    points.sort_by(|p1, p2| p1.cmp(p2));
+    for point in points.iter() {
+        if *point < x + r {
+            continue;
+        }
+        count += 1;
+        x = *point;
+    }
+    count
+}
