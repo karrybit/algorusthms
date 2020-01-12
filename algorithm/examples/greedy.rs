@@ -12,4 +12,7 @@ fn main() {
 
     let points = vec![1, 7, 15, 20, 30, 50];
     println!("{}", algorithm::greedy::sarumans_army(points, 10));
+
+    let board = vec![8, 5, 8];
+    println!("{}", algorithm::greedy::fence_repair(board));
 }

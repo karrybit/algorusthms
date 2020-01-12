@@ -53,3 +53,18 @@ pub fn sarumans_army(mut points: Vec<u32>, r: u32) -> u32 {
     }
     count
 }
+
+pub fn fence_repair(mut board: Vec<u32>) -> u32 {
+    let mut cost = 0;
+
+    while board.len() > 1 {
+        board.sort_by(|b1, b2| b2.cmp(b1));
+        let min1 = board.pop().unwrap();
+        let min2 = board.pop().unwrap();
+        let t = min1 + min2;
+        cost += t;
+        board.push(t);
+    }
+
+    cost
+}
